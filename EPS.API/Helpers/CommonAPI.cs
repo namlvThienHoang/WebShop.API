@@ -28,7 +28,6 @@ namespace EPS.API.Helpers
         public static async Task<objExportResult> Export<T>(List<T> lstObject, string type, EPSBaseService BaseService)
        where T : class
         {
-
             try
             {
                 ConfigExcelGridPaging pagingConfig = new ConfigExcelGridPaging { Type = type, loai = 1 };
