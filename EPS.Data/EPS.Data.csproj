@@ -1,0 +1,71 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup Label="Globals">
+    <SccProjectName></SccProjectName>
+    <SccProvider></SccProvider>
+    <SccAuxPath></SccAuxPath>
+    <SccLocalPath></SccLocalPath>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+	</PropertyGroup>
+ 
+  <ItemGroup>
+    <Compile Remove="Entities.old\**" />
+    <Compile Remove="Entities_OLD\**" />
+    <EmbeddedResource Remove="Entities.old\**" /> 
+    <EmbeddedResource Remove="Entities_OLD\**" />
+    <None Remove="Entities.old\**" />
+    <None Remove="Entities_OLD\**" />
+  </ItemGroup>
+ 
+  <ItemGroup>
+    <Compile Remove="TSCContext.old.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HotChocolate.AspNetCore" Version="10.4.3" />
+    <PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="10.4.3" />
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection.EntityFrameworkCore" Version="6.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.20">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="6.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.20">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.16" />
+    <PackageReference Include="NPOI" Version="2.6.1" />
+    <PackageReference Include="Oracle.EntityFrameworkCore" Version="6.21.110" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.110" />
+    <PackageReference Include="SolrNet.Core" Version="1.1.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EPS.Utils.Common\EPS.Utils.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="EPS.Utils.Repository">
+      <HintPath>..\EPS.Utils.Common\DLL\EPS.Utils.Repository.dll</HintPath>
+    </Reference>
+    <Reference Include="EPS.Utils.Service">
+      <HintPath>..\EPS.Utils.Common\DLL\EPS.Utils.Service.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="units.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project> 

@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName></SccProjectName>
+    <SccProvider></SccProvider>
+    <SccAuxPath></SccAuxPath>
+    <SccLocalPath></SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="4.5.3" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.0.22" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DocX">
+      <HintPath>DLL\DocX.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>DLL\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>DLL\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>DLL\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>DLL\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <HintPath>DLL\System.Web.Extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

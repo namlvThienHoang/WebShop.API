@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName></SccProjectName>
+    <SccProvider></SccProvider>
+    <SccAuxPath></SccAuxPath>
+    <SccLocalPath></SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JsonModelBinder" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.20" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.20" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.20" />
+    <PackageReference Include="SolrNet.Core" Version="1.1.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EPS.Data\EPS.Data.csproj" />
+    <ProjectReference Include="..\EPS.Service\EPS.Service.csproj" />
+    <ProjectReference Include="..\EPS.Utils.Common\EPS.Utils.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="EPS.Utils.Repository">
+      <HintPath>..\EPS.Utils.Common\DLL\EPS.Utils.Repository.dll</HintPath>
+    </Reference>
+    <Reference Include="EPS.Utils.Service">
+      <HintPath>..\EPS.Utils.Common\DLL\EPS.Utils.Service.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

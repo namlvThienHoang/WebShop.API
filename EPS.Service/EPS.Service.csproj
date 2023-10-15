@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName></SccProjectName>
+    <SccProvider></SccProvider>
+    <SccAuxPath></SccAuxPath>
+    <SccLocalPath></SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Dtos\TTTINTUCHVHANHVI\**" />
+    <EmbeddedResource Remove="Dtos\TTTINTUCHVHANHVI\**" />
+    <None Remove="Dtos\TTTINTUCHVHANHVI\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Profiles\TTTINTUCHVHANHVIProfile.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EPS.Data\EPS.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="3.1.3" />
+    <PackageReference Include="SolrNet.Core" Version="1.1.1" />
+    <PackageReference Include="SolrNet.Microsoft.DependencyInjection" Version="1.1.1" />
+    <PackageReference Include="System.DirectoryServices" Version="6.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="EPS.Utils.Repository">
+      <HintPath>..\EPS.Utils.Common\DLL\EPS.Utils.Repository.dll</HintPath>
+    </Reference>
+    <Reference Include="EPS.Utils.Service">
+      <HintPath>..\EPS.Utils.Common\DLL\EPS.Utils.Service.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
