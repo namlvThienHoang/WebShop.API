@@ -1,12 +1,12 @@
 'user client'
 import axios from "axios";
-import {Login} from "../model"
+import { Login } from "../model"
 export const AuthService = () => {
   const login = async (data: { username: string; password: string }) => {
     const body: Login = {
       grant_type: "password",
       username: data.username,
-      password: data.password,    
+      password: data.password,
     };
     try {
       const res: any = await axios.post("api/login", body);
@@ -38,6 +38,6 @@ export const AuthService = () => {
     getOauth,
     setLogout,
     setOauth,
-    
+
   };
 };
