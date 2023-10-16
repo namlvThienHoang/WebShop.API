@@ -13,7 +13,7 @@ export default function Page() {
     const { login, getOauth } = AuthService();
     const SignupSchema = Yup.object().shape({
         username: Yup.string()
-            .min(2, "Tên đăng nhập tối thiểu 2 ký tự!")
+            .min(2, "Tên đăng nhập tối thiểu 2 ký tự! ")
             .max(70, "Tên đăng nhập đa 70 ký tự!")
             .required("Vui lòng nhập tên đăng nhập."),
         password: Yup.string().required("Vui lòng nhập mật khẩu."),
