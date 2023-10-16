@@ -35,6 +35,7 @@ export const AuthService = () => {
   };
   return {
     login,
+    
     getOauth,
     setLogout,
     setOauth,
